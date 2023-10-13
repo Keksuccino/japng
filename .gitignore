@@ -1,8 +1,0 @@
-build
-*.iml
-*.class
-*.tmp
-DEL
-.gradle
-.idea
-local.properties

@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'de.keksuccino'
-version '0.5.2-2'
+version '0.5.2-3'
 
 repositories {
     mavenCentral()
@@ -27,6 +27,17 @@ jar {
                 'Timestamp'               : System.currentTimeMillis(),
                 'Built-On-Java'           : "${System.getProperty('java.vm.version')} (${System.getProperty('java.vm.vendor')})"
         ])
+    }
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = "de.keksuccino"
+            artifactId = 'japng'
+            version = '0.5.2-3'
+            from components.java
+        }
     }
 }
 
